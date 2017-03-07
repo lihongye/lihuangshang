@@ -1,0 +1,12 @@
+# ignore files
+
+/api/.htaccess
+/inc/config.ini
+/inc/config.ini.*
+/images/barcode
+media
+api/db.php
+application/config/config.ini
+application/config/development/*
+application/logs/*
+/logs/*
