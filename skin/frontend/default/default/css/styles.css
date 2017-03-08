@@ -26,7 +26,7 @@
 /* Reset ================================================================================= */
 * { margin:0; padding:0; }
 
-body          { background:#496778 url(../images/bkg_body.gif) 50% 0 repeat-y; font:12px/1.55 Arial, Helvetica, sans-serif; color:#2f2f2f; text-align:center; }
+body          {font:12px/1.55 Arial, Helvetica, sans-serif; color:#2f2f2f; text-align:center; }
 
 img           { border:0; vertical-align:top; }
 
@@ -87,6 +87,7 @@ ul,ol         { list-style:none; }
 .no-margin    { margin:0 !important; }
 .no-padding   { padding:0 !important; }
 .no-bg        { background:none !important; }
+.w1100        {width:1100px; margin:0 auto; }
 /* ======================================================================================= */
 
 
@@ -137,7 +138,7 @@ ul,ol         { list-style:none; }
 /* Form Elements */
 input,select,textarea,button { font:12px/15px Arial, Helvetica, sans-serif; vertical-align:middle; color:#2f2f2f; }
 input.input-text,select,textarea { background:#fff; border:1px solid #b6b6b6; }
-input.input-text,textarea { padding:2px; }
+input.input-text,textarea {padding: 5px 10px;border: none;outline: none;}
 select { padding:1px; }
 select option { padding-right:10px; }
 select.multiselect option { border-bottom:1px solid #b6b6b6; padding:2px 5px; }
@@ -148,8 +149,8 @@ input.checkbox { margin-right:3px; }
 input.qty { width:2.5em !important; }
 button.button::-moz-focus-inner { padding:0; border:0; } /* FF Fix */
 button.button { -webkit-border-fit:lines; } /* <- Safari & Google Chrome Fix */
-button.button { overflow:visible; width:auto; border:0; padding:0; margin:0; background:transparent; cursor:pointer; }
-button.button span { display:block; height:19px; border:1px solid #de5400; background:#f18200; padding:0 8px; font:bold 12px/19px Arial, Helvetica, sans-serif; text-align:center; white-space:nowrap; color:#fff; }
+button.button { overflow:visible; width:auto; border:0; padding:0; margin:0px 0px 0px -4px; background:transparent; cursor:pointer; }
+button.button span { display: block; height: 25px; background: #EF5F21; padding: 0 8px; font: bold 12px/25px Arial, Helvetica, sans-serif; text-align: center; white-space: nowrap; color: #fff;}
 button.button span span { border:0; padding:0; }
 button.disabled span { border-color:#bbb !important; background:#bbb !important; }
 
@@ -257,34 +258,6 @@ input.input-text:focus,select:focus,textarea:focus { background-color:#edf7fd; }
 .form-list .customer-dob .dob-month input.input-text { width:46px; }
 .form-list .customer-dob .dob-year { width:140px; }
 .form-list .customer-dob .dob-year input.input-text { width:134px; }
-
-/* Independent fields */
-/*.form-list li { margin:0 0 8px; }
-.form-list li.fields { margin:0; }
-.form-list .field { display:block; margin:0 0 8px; }
-.form-list li.control {}
-.form-list label { float:left; width:150px; padding:2px 10px 0 0; text-align:right; }
-.form-list label.required { font-weight:bold; }
-.form-list label.required em { font-variant:normal; color:#eb340a; margin-right:3px; }
-.form-list .input-box { float:left; width:260px; }
-.form-list input.input-text,
-.form-list textarea { width:254px; }
-.form-list select { width:260px; }
-.form-list li.additional-row { border-top:1px solid #ddd; margin-top:10px; }
-.form-list li.additional-row .btn-remove { float:right; margin:5px 5px 0 0; }
-.form-list .input-range input.input-text { width:96px; }*/
-/* Customer */
-/*.form-list .customer-dob .dob-month,
-.form-list .customer-dob .dob-day,
-.form-list .customer-dob .dob-year { float:left; width:85px; }
-.form-list .customer-dob input.input-text { display:block; width:74px; }
-.form-list .customer-dob label { font-size:11px; font-weight:normal; color:#777; text-align:left; }
-.form-list .customer-dob .dob-day,
-.form-list .customer-dob .dob-month { width:60px; }
-.form-list .customer-dob .dob-day input.input-text,
-.form-list .customer-dob .dob-month input.input-text { width:46px; }
-.form-list .customer-dob .dob-year { width:140px; }
-.form-list .customer-dob .dob-year input.input-text { width:134px; }*/
 
 .buttons-set { clear:both; margin:4em 0 0; padding:8px 0 0; border-top:1px solid #e4e4e4; text-align:right; }
 .buttons-set p.required { margin:0 0 10px; }
@@ -509,15 +482,15 @@ tr.summary-details-excluded { font-style:italic; }
 
 
 /* Header ================================================================================ */
-.logo { float:left; }
-.header-container { border-top:5px solid #0d2131; border-bottom:1px solid #415966; background:url(../images/bkg_header.jpg) 50% 0 repeat; }
-.header { width:930px; margin:0 auto; padding:10px; text-align:right; position:relative; z-index:10; }
-.header .logo { float:left; margin:3px 0 10px 12px; text-decoration:none !important; }
+.header-top {background:#000;padding: 10px 0px;}
+.header {text-align:right; position:relative; z-index:10; padding:15px 0px;}
+.header .logo {margin:0; text-decoration:none !important; }
 .header .logo strong { position:absolute; top:-999em; left:-999em; width:0; height:0; font-size:0; line-height:0; text-indent:-999em; overflow:hidden; }
 .header h1.logo { margin:0; }
-.header .quick-access { float:right; width:600px; padding:28px 10px 0 0; }
-.header .welcome-msg { margin:0; color:#fff; text-align:right; }
-.header .welcome-msg a { color:#ebbc58; }
+.header-top .links li {margin-right:15px;}
+.header-top .links li.last {margin-right:0px;}
+.header-top .links a { color:#fff;text-decoration: none;font-size:14px;}
+
 .header .form-search { position:absolute; top:0; right:29px; width:315px; height:30px; background:url(../images/bkg_form-search.gif) 0 0 no-repeat; padding:1px 0 0 16px; }
 .header .form-search label { float:left; width:24px; height:21px; text-align:left; text-indent:-999em; overflow:hidden; }
 .header .form-search input.input-text { float:left; border-color:#5c7989; width:209px; margin-right:4px; }
@@ -534,9 +507,9 @@ tr.summary-details-excluded { font-style:italic; }
 .header .form-language label { font-weight:bold; padding-right:5px; color:#a7c6dd; vertical-align:middle; }
 .header .form-language select { padding:0; }
 .header .form-language select.flags option { background-position:4px 50%; background-repeat:no-repeat; padding-left:25px; }
-.header .links { float:right; margin:0 0 6px; }
-.header .links li { float:left; font-size:11px; background:url(../images/bkg_pipe1.gif) 100% 60% no-repeat; padding:0 8px 0 7px; }
-.header .links a { color:#ebbc58; }
+
+
+
 .header-container .top-container { clear:both; padding:5px 10px 0 12px; text-align:right; }
 .header-container .top-container a { font-size:11px; color:#ebbc58; }
 
@@ -1740,7 +1713,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 
 /* Clears ================================================================================ */
-.clearer:after,
+.clearer:after,.clearer,
 .header-container:after,
 .header-container .top-container:after,
 .header:after,
