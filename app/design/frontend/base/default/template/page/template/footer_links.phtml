@@ -1,0 +1,45 @@
+<?php
+/**
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2013 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * @see Mage_Page_Block_Template_Links
+ */
+?>
+<div class="footer-block left">
+  <h4 class="footer-title">MORE INFO</h4>
+  <?php $_links = $this->getLinks(); ?>
+  <?php if(count($_links)>0): ?>
+  <ul class="links"<?php if($this->getName()): ?> id="<?php echo $this->getName() ?>"<?php endif;?>>
+      <?php foreach($_links as $_link): ?>
+          <?php if ($_link instanceof Mage_Core_Block_Abstract):?>
+              <?php echo $_link->toHtml() ?>
+          <?php else: ?>
+              <li<?php if($_link->getIsFirst()||$_link->getIsLast()): ?> class="<?php if($_link->getIsFirst()): ?>first<?php endif; ?><?php if($_link->getIsLast()): ?> last<?php endif; ?>"<?php endif; ?> <?php echo $_link->getLiParams() ?>><?php echo $_link->getBeforeText() ?><a href="<?php echo $_link->getUrl() ?>" title="<?php echo $_link->getTitle() ?>" <?php echo $_link->getAParams() ?>><?php echo $_link->getLabel() ?></a><?php echo $_link->getAfterText() ?></li>
+          <?php endif;?>
+      <?php endforeach; ?>
+  </ul>
+  <?php endif; ?>
+</div>
+
+<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_links')->toHtml();?>  
+
+<div class="footer-block left">
+  <h4 class="footer-title">MORE INFO</h4>
+  <ul>
+    <li><a href="http://127.0.0.1/magento/index.php/about-magento-demo-store">About Us</a></li>
+    <li><a href="http://127.0.0.1/magento/index.php/customer-service">Customer Service</a></li>
+    <li><a href="http://127.0.0.1/magento/index.php/privacy-policy-cookie-restriction-mode">Privacy Policy</a></li>
+  </ul>
+</div>
+
+<div class="footer-block left">
+  <h4 class="footer-title">NEWSLETTER</h4>
+  <?php echo $this->getLayout()->createBlock('newsletter/subscribe')->setTemplate('newsletter/subscribe.phtml')->toHtml(); ?>  
+</div>
+<div class="clearer"></div>
