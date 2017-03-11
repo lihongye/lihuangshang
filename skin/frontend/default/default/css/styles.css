@@ -1,27 +1,3 @@
-/**
- * Magento
- *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Academic Free License (AFL 3.0)
- * that is bundled with this package in the file LICENSE_AFL.txt.
- * It is also available through the world-wide-web at this URL:
- * http://opensource.org/licenses/afl-3.0.php
- * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wide-web, please send an email
- * to license@magentocommerce.com so we can send you a copy immediately.
- *
- * DISCLAIMER
- *
- * Do not edit or add to this file if you wish to upgrade Magento to newer
- * versions in the future. If you wish to customize Magento for your
- * needs please refer to http://www.magentocommerce.com for more information.
- *
- * @category    design
- * @package     default_default
- * @copyright   Copyright (c) 2013 Magento Inc. (http://www.magentocommerce.com)
- * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
- */
 
 /* Reset ================================================================================= */
 * { margin:0; padding:0; }
@@ -50,7 +26,7 @@ fieldset      { border:0; }
 legend        { display:none; }
 
 /* Table */
-table         { border:0; /*border-collapse:collapse;*/ border-spacing:0; empty-cells:show; font-size:100%; }
+table         { border:0; border-spacing:0; empty-cells:show; font-size:100%; }
 caption,th,td { vertical-align:top; text-align:left; font-weight:normal; }
 
 /* Content */
@@ -63,7 +39,6 @@ blockquote    { quotes:none; }
 q:before,
 q:after       { content:''; }
 small,big     { font-size:1em; }
-/*sup           { font-size:1em; vertical-align:top; }*/
 
 /* Lists */
 ul,ol         { list-style:none; }
@@ -97,7 +72,7 @@ ul,ol         { list-style:none; }
 .page-print { background:#fff; padding:25px 30px; text-align:left; }
 .page-empty { background:#fff; padding:20px; text-align:left; }
 .page-popup { background:#fff; padding:25px 30px; text-align:left; }
-.main {min-height:500px; padding:25px 25px 80px;text-align:left; }
+.main {min-height:500px; padding:25px 0 80px;text-align:left; }
 
 /* Base Columns */
 .col-left { float:left; width:195px; padding:0 0 1px; }
@@ -342,8 +317,6 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .data-table { width:100%; border:1px solid #bebcb7; }
 .data-table .odd  { background:#f8f7f5 }
 .data-table .even { background:#eeeded; }
-/*.data-table tr.odd:hover,
-.data-table tr.even:hover { background:#ebf1f6; }*/
 .data-table td.last,
 .data-table th.last { border-right:0; }
 .data-table tr.last th,
@@ -649,7 +622,6 @@ tr.summary-details-excluded { font-style:italic; }
 .block-layered-nav .actions a { float:none; }
 
 /* Block: Cart */
-.block-cart .block-title { /*border-bottom:0;*/ }
 .block-cart .block-title strong { background-image:url(../images/i_block-cart.gif); }
 .block-cart .summary { background:#fff; padding:2px 8px 8px; margin:-1px 0 0; position:relative; z-index:1; }
 .block-cart .amount { margin:0; }
