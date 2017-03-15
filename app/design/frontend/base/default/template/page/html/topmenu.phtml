@@ -15,21 +15,9 @@
 ?>
 <?php // load(level-number)?>  
 <?php $categoryIds = Mage::getModel('catalog/category')->load(3)->getChildren() ?>  
-
-<?php $categoryIds = explode(',', $categoryIds); ?>  
-<?php $count = count($categoryIds); $i=0; ?> 
-<div class="nav-container right">
-  <ul id="nav">
-    <?php foreach ($categoryIds as $categoryId): ?>  
-    <?php $category = Mage::getModel("catalog/category")->load($categoryId) ?>  
-    <li<?php if (++$i == $count): ?> class="last"<?php endif ?>><a href="<?php echo $category->getUrl() ?>" title="<?php echo $this->stripTags($category->getName()) ?>"><?php echo $this->stripTags($category->getName()) ?></a></li>  
-    <?php endforeach ?> 
-  </ul>
-</div>
-
-<?php $_menu = $this->getHtml('level-top');?>
+<?php $_menu = $this->getHtml('level-top') ?>
 <?php if($_menu): ?>
-<div class="nav-container">
+<div class="nav-container right">
     <ul id="nav">
         <?php echo $_menu ?>
     </ul>
