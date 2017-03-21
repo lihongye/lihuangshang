@@ -61,9 +61,8 @@
     <?php endif ?>
 
     <?php if($this->getLastPageNum()>1): ?>
-    <div class="pages">
-        <strong><?php echo $this->__('Page:') ?></strong>
-        <ol>
+    <div class="left">
+        <ol class="pagination">
         <?php if (!$this->isFirstPage()): ?>
             <li>
                 <a class="previous<?php if(!$this->getAnchorTextForPrevious()): ?> i-previous<?php endif;?>" href="<?php echo $this->getPreviousPageUrl() ?>" title="<?php echo $this->__('Previous') ?>">
